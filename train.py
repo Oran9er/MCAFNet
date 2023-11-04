@@ -15,12 +15,12 @@ from sklearn.model_selection import train_test_split
 from torch.optim import lr_scheduler
 from tqdm import tqdm
 from albumentations import RandomRotate90,Resize
-import archs
+import archs1
 import losses
 from dataset import Dataset
-from metricsAll import iou_score
+from metricsAll_fortest import iou_score
 from utils import AverageMeter, str2bool
-from archs import UNext
+from archs1 import MCAFNet 
 
 
 ARCH_NAMES = archs.__all__
@@ -40,7 +40,7 @@ def parse_args():
                         metavar='N', help='mini-batch size (default: 16)')
     
     # model
-    parser.add_argument('--arch', '-a', metavar='ARCH', default='UNext')
+    parser.add_argument('--arch', '-a', metavar='ARCH', default='MCAFnet')
     parser.add_argument('--deep_supervision', default=False, type=str2bool)
     parser.add_argument('--input_channels', default=3, type=int,
                         help='input channels')

@@ -14,7 +14,7 @@ import torchvision.transforms.functional as TF
 import os
 import matplotlib.pyplot as plt
 from utils import *
-__all__ = ['UNext']
+__all__ = ['mcafnet']
 
 import timm
 from timm.models.layers import DropPath, to_2tuple, trunc_normal_
@@ -268,7 +268,7 @@ class OverlapPatchEmbed(nn.Module):
         return x, H, W
 
 
-class UNext(nn.Module):
+class MCAFNet(nn.Module):
 
     ## Conv 3 + MLP 2 + shifted MLP
     

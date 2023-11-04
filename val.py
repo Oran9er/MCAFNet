@@ -17,8 +17,8 @@ from utils import AverageMeter
 from albumentations import RandomRotate90,Resize
 import time
 
-from miccai_msnet import M2SNet
-import miccai_msnet
+from archs1 import MCAFNet
+import archs1
 
 
 
